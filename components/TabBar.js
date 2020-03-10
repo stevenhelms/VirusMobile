@@ -8,13 +8,13 @@ const TabBar = props => {
     <View style={styles.container}>
       <View style={styles.itemContainer}>
         <View style={styles.itemBox}>
-          <Text>Home</Text>
+          <Text style={styles.itemText}>Home</Text>
         </View>
         <View style={styles.itemBox}>
-          <Text>Virus</Text>
+          <Text style={styles.itemText}>Get Virus</Text>
         </View>
         <View style={styles.itemBox}>
-          <Text>Settings</Text>
+          <Text style={styles.itemText}>Settings</Text>
         </View>
       </View>
     </View>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     height: barHeight,
     width: "100%",
-    backgroundColor: "#009ddc"
+    backgroundColor: "#f9ca24"
   },
   itemContainer: {
     flexDirection: "row",
@@ -37,7 +37,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     height: barHeight,
     borderWidth: 1,
-    borderColor: '#003767'
+    borderColor: '#999',
+  },
+  itemText: {
+    color: '#003767',
+    textAlign: 'center',
+    fontWeight: '700',
+    fontSize: 18
+
   }
 });
 
