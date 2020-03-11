@@ -17,10 +17,9 @@ const styles = StyleSheet.create({
     padding: 10
   },
   text: {
-    color: "#003767",
-    fontSize: 12,
-    alignItems: "center",
-    justifyContent: "center"
+    color: "#5f6c11",
+    fontSize: 18,
+    textAlign: 'center',
   }
 });
 

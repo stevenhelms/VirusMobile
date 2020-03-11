@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-const barHeight = 100;
+const barHeight = 60;
 
 const TabBar = props => {
   return (
@@ -11,7 +11,7 @@ const TabBar = props => {
           <Text style={styles.itemText}>Home</Text>
         </View>
         <View style={styles.itemBox}>
-          <Text style={styles.itemText}>Get Virus</Text>
+          <Text style={styles.itemText}>Virus Carriers</Text>
         </View>
         <View style={styles.itemBox}>
           <Text style={styles.itemText}>Settings</Text>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   container: {
     height: barHeight,
     width: "100%",
-    backgroundColor: "#f9ca24"
+    backgroundColor: "#fbc11a",
   },
   itemContainer: {
     flexDirection: "row",
@@ -37,14 +37,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     height: barHeight,
     borderWidth: 1,
-    borderColor: '#999',
+    borderColor: '#eae7e0',
+    padding: 10
   },
   itemText: {
-    color: '#003767',
+    color: '#eae7e0',
     textAlign: 'center',
     fontWeight: '700',
-    fontSize: 18
-
+    fontSize: 18,
   }
 });
 
