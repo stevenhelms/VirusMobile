@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+import Colors from '../constants/colors';
 
 const barHeight = 60;
 
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   container: {
     height: barHeight,
     width: "100%",
-    backgroundColor: "#fbc11a",
+    backgroundColor: Colors.aqua,
   },
   itemContainer: {
     flexDirection: "row",
@@ -37,14 +38,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     height: barHeight,
     borderWidth: 1,
-    borderColor: '#eae7e0',
+    borderColor: Colors.gray,
     padding: 10
   },
   itemText: {
-    color: '#eae7e0',
+    color: Colors.gray,
     textAlign: 'center',
     fontWeight: '700',
     fontSize: 18,
+    fontFamily: 'raleway',
   }
 });
 

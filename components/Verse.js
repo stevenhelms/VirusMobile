@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+import Colors from '../constants/colors';
 
 const Verse = props => {
   return (
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   text: {
-    color: "#5f6c11",
+    color: Colors.green,
     fontSize: 18,
     textAlign: 'center',
   }

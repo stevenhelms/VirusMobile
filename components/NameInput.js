@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text, TextInput, Button } from "react-native";
+import Colors from '../constants/colors';
 
 const NameInput = props => {
   return (
@@ -7,10 +8,10 @@ const NameInput = props => {
       <TextInput style={styles.input} placeholder="Enter Name" />
       <View style={styles.buttonContainer}>
         <View style={styles.button}>
-          <Button title="Reset" color="#fbc11a" />
+          <Button title="Reset" color={Colors.yellow} />
         </View>
         <View style={styles.button}>
-          <Button title="Enter" color="#4d9699" />
+          <Button title="Enter" color={Colors.aqua} />
         </View>
       </View>
     </View>

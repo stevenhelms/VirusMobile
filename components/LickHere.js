@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
+import Colors from '../constants/colors';
 
 const LickHere = props => {
   return (
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: "center",
-    color: '#5f6c11',
+    color: Colors.green,
     fontSize: 18,
   }
 });
