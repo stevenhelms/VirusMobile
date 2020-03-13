@@ -10,6 +10,14 @@ export default {
     {
         id: 3,
         name: 'Pointy-Haired Boss',
-    }
+    },
+    {
+      id: 4,
+      name: 'Bernie',
+    },
+    {
+      id: 5,
+      name: 'Donald',
+    },
   ]
 };

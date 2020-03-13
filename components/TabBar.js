@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+
 import Colors from '../constants/colors';
+import TabBarItem from '../components/TabBarItem';
 
 const barHeight = 60;
 
@@ -8,6 +10,8 @@ const TabBar = props => {
   return (
     <View style={styles.container}>
       <View style={styles.itemContainer}>
+        {/* DRY: Make items into component */}
+        <TabBarItem height={barHeight} onPress={props.onPress} dest='carrier'>Home</TabBarItem>
         <View style={styles.itemBox}>
           <Text style={styles.itemText}>Home</Text>
         </View>
@@ -36,17 +40,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    height: barHeight,
     borderWidth: 1,
+    height: 60,
     borderColor: Colors.gray,
     padding: 10
   },
   itemText: {
     color: Colors.gray,
-    textAlign: 'center',
-    fontWeight: '700',
+    textAlign: "center",
     fontSize: 18,
-    fontFamily: 'raleway',
+    fontFamily: "oxanium"
   }
 });
 
