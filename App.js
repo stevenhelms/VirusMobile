@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableWithoutFeedback,
+  Keyboard
+} from "react-native";
 import * as Font from "expo-font";
 import { AppLoading } from "expo";
 
@@ -10,7 +16,7 @@ import SettingsScreen from "./screens/SettingsScreen";
 import Header from "./components/Header";
 import TabBar from "./components/TabBar";
 
-import DemoData from './constants/demo-data';
+import DemoData from "./constants/demo-data";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -22,19 +28,19 @@ const fetchFonts = () => {
 
 export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
-  const [screenState, setScreenState] = useState('home');
+  const [screenState, setScreenState] = useState("home");
   const [carriers, setCarriers] = useState(DemoData.virusCarriers);
 
-  const switchScreen = (screen) => {
+  const switchScreen = screen => {
     setScreenState(screen);
-    console.log('switchScreen: '+screen);
-  }
+    console.log("switchScreen: " + screen);
+  };
 
   const setVirusCarriers = carrierName => {
-    let newCarrier = { id: carriers.length+1, name: carrierName };
-    console.log( newCarrier );
-    setCarriers(pastCarriers => [ ...pastCarriers, newCarrier ] );
-    console.log( carriers );
+    let newCarrier = { id: carriers.length + 1, name: carrierName };
+    console.log(newCarrier);
+    setCarriers(pastCarriers => [...pastCarriers, newCarrier]);
+    console.log(carriers);
   };
 
   if (!dataLoaded) {
@@ -48,18 +54,24 @@ export default function App() {
   }
 
   let content = <HomeScreen addVirusCarrier={setVirusCarriers} />;
-  if (screenState == 'carrier') {
+  if (screenState == "carrier") {
     content = <CarriersScreen virusCarriers={carriers} />;
-  } else if ( screenState == 'settings') {
+  } else if (screenState == "settings") {
     content = <SettingsScreen />;
   }
 
   return (
-    <View style={styles.screen}>
-      <Header title="Virus Giver" />
-      {content}
-      <TabBar onPress={switchScreen} />
-    </View>
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+      }}
+    >
+      <View style={styles.screen}>
+        <Header title="Virus Giver" />
+        {content}
+        <TabBar onPress={switchScreen} />
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
