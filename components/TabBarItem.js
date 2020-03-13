@@ -8,7 +8,7 @@ const TabBarItem = props => {
   return (
     <TouchableHighlight onPress={props.onPress.bind(this,props.dest)} style={styles.itemContainer}>
       <View style={styles.itemBox}>
-        <Text style={styles.itemText}>Home</Text>
+        <Text style={styles.itemText}>{props.children}</Text>
       </View>
     </TouchableHighlight>
   );

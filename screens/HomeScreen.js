@@ -9,7 +9,7 @@ const HomeScreen = props => {
   return (
     <View style={styles.screen}>
       <Verse verse="Freely ye have received, freely give. Matthew 10:8b KJV" />
-      <NameInput addCarrier={props.addCarrier} />
+      <NameInput addVirusCarrier={props.addVirusCarrier} />
       <LickHere />
     </View>
   );

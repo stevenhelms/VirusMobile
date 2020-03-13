@@ -33,7 +33,7 @@ export default function App() {
   const setVirusCarriers = carrierName => {
     let newCarrier = { id: carriers.length+1, name: carrierName };
     console.log( newCarrier );
-    setCarriers(newCarrier =>  newCarrier );
+    setCarriers(pastCarriers => [ ...pastCarriers, newCarrier ] );
     console.log( carriers );
   };
 
@@ -47,7 +47,7 @@ export default function App() {
     );
   }
 
-  let content = <HomeScreen addCarrier={setVirusCarriers} />;
+  let content = <HomeScreen addVirusCarrier={setVirusCarriers} />;
   if (screenState == 'carrier') {
     content = <CarriersScreen virusCarriers={carriers} />;
   } else if ( screenState == 'settings') {

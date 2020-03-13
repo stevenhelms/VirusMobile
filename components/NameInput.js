@@ -10,8 +10,8 @@ const NameInput = props => {
   };
 
   const addNameHandler = () => {
-    props.addCarrier(newName);
     console.log('addNameHandler: '+ newName);
+    props.addVirusCarrier(newName);
   };
 
   return (

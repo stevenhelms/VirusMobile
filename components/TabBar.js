@@ -11,16 +11,9 @@ const TabBar = props => {
     <View style={styles.container}>
       <View style={styles.itemContainer}>
         {/* DRY: Make items into component */}
-        <TabBarItem height={barHeight} onPress={props.onPress} dest='carrier'>Home</TabBarItem>
-        <View style={styles.itemBox}>
-          <Text style={styles.itemText}>Home</Text>
-        </View>
-        <View style={styles.itemBox}>
-          <Text style={styles.itemText}>Virus Carriers</Text>
-        </View>
-        <View style={styles.itemBox}>
-          <Text style={styles.itemText}>Settings</Text>
-        </View>
+        <TabBarItem height={barHeight} onPress={props.onPress} dest='home'>Home</TabBarItem>
+        <TabBarItem height={barHeight} onPress={props.onPress} dest='carrier'>Virus Carriers</TabBarItem>
+        <TabBarItem height={barHeight} onPress={props.onPress} dest='settings'>Settings</TabBarItem>
       </View>
     </View>
   );
