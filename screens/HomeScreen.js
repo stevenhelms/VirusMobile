@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text, Button } from "react-native";
+import { StyleSheet, View } from "react-native";
 
-import Header from "../components/Header";
 import NameInput from "../components/NameInput";
-import TabBar from "../components/TabBar";
 import LickHere from "../components/LickHere";
 import Verse from "../components/Verse";
 
